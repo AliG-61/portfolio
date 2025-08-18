@@ -8,6 +8,8 @@
   <script defer src="script.js"></script>
 </head>
 <body>
+
+  <!-- HERO -->
   <section id="hero" class="section hero">
     <div class="content">
       <h1>Ali Gündüz</h1>
@@ -19,7 +21,9 @@
       <img src="avatar.png" alt="Avatar">
     </div>
   </section>
- <section id="about" class="section about">
+
+  <!-- ABOUT -->
+  <section id="about" class="section about">
     <h2>About Me</h2>
     <p>
       I am a Computer Engineering student passionate about web development,
@@ -37,7 +41,9 @@
       </div>
     </div>
   </section>
- <section id="projects" class="section projects">
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section projects">
     <h2>Projects</h2>
     <div class="project-list">
       <div class="project-card">
@@ -58,7 +64,9 @@
       </div>
     </div>
   </section>
- <section id="skills" class="section skills">
+
+  <!-- SKILLS -->
+  <section id="skills" class="section skills">
     <h2>Skills</h2>
     <div class="skill-bars">
       <div class="skill">
@@ -78,21 +86,60 @@
         <span>JavaScript</span>
         <div class="bar"><div class="fill" style="--level:60%"></div></div>
       </div>
+      
   </section>
+
+  <!-- CONTACT -->
   <section id="contact" class="section contact">
-    <h2>Contact Me</h2>
-    <form action="https://formspree.io/f/xpwleklj"
-  method="POST">
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Your Message" required></textarea>
-      <button type="submit" class="btn">Send</button>
-    </form>
-    <div class="socials">
-      <a href="https://github.com/AliG-61" target="_blank">GitHub</a>
-      <a href="https://linkedin.com" target="_blank">LinkedIn</a>
-      <a href="mailto:ali.gunduz.2029@gmail.com">Email</a>
-    </div>
-  </section>
+  <h2>Contact Me</h2>
+  <form id="contact-form" action="https://formspree.io/f/xpwleklj" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Your Message" required></textarea>
+    <button type="submit" class="btn">Send</button>
+  </form>
+
+  <!-- Form sonucu mesajı gösterecek yer -->
+  <p id="form-status"></p>
+
+  <div class="socials">
+    <a href="https://github.com/AliG-61" target="_blank">GitHub</a>
+    <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+    <a href="mailto:ali.gunduz.2029@gmail.com">Email</a>
+  </div>
+</section>
+<script>
+  const form = document.getElementById("contact-form");
+  const status = document.getElementById("form-status");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault(); // sayfa yenilenmesin
+
+    const data = new FormData(form);
+    const obj = Object.fromEntries(data.entries());
+
+    try {
+      const response = await fetch(form.action, {
+        method: form.method,
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(obj)
+      });
+
+      if (response.ok) {
+        status.innerHTML = "✅ Message sent successfully!";
+        form.reset();
+      } else {
+        status.innerHTML = "❌ Something went wrong. Try again!";
+      }
+    } catch (err) {
+      status.innerHTML = "⚠️ Server error. Please try later.";
+    }
+  });
+</script>
+
+
 </body>
 </html>
+
