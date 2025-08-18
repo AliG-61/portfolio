@@ -1,30 +1,27 @@
-
 body {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Poppins', sans-serif;
   background: #f9f9f9;
   color: #333;
   line-height: 1.6;
 }
-
-
 header {
   background: #222;
   color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   padding: 10px 20px;
 }
-
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
 nav h1 {
   margin: 0;
-  font-size: 24px;
+  font-weight: 700;
 }
-
 nav ul {
   list-style: none;
   display: flex;
@@ -32,53 +29,100 @@ nav ul {
   margin: 0;
   padding: 0;
 }
-
 nav ul li a {
   color: #fff;
   text-decoration: none;
+  font-weight: 500;
   transition: 0.3s;
 }
-
 nav ul li a:hover {
   color: #ff9800;
 }
-
-
 #hero {
   text-align: center;
-  padding: 60px 20px;
+  padding: 80px 20px;
   background: linear-gradient(135deg, #6a11cb, #2575fc);
   color: white;
 }
-
 #hero h2 {
-  font-size: 36px;
-  margin-bottom: 10px;
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+#hero .highlight {
+  color: #ffea00;
+}
+.hero-buttons {
+  margin-top: 20px;
+}
+.btn {
+  display: inline-block;
+  background: #ff9800;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  margin: 5px;
+  transition: 0.3s;
+}
+.btn:hover {
+  background: #e68900;
+}
+.btn-alt {
+  background: white;
+  color: #333;
 }
 
-
+.btn-alt:hover {
+  background: #ddd;
+}
 section {
-  padding: 40px 20px;
-  max-width: 900px;
+  padding: 50px 20px;
+  max-width: 1100px;
   margin: auto;
 }
-
 section h2 {
   font-size: 28px;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
+  text-align: center;
+  color: #222;
+}
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+.project-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   text-align: center;
 }
-
-section p {
-  text-align: center;
-  font-size: 18px;
+.project-card h3 {
+  margin-top: 0;
+  color: #2575fc;
 }
-
-
+.contact-links {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+}
+.contact-links li {
+  margin: 10px 0;
+}
+.contact-links a {
+  color: #2575fc;
+  text-decoration: none;
+  font-weight: 500;
+}
+.contact-links a:hover {
+  text-decoration: underline;
+}
 footer {
   background: #222;
   color: #fff;
   text-align: center;
   padding: 15px;
-  margin-top: 20px;
+  margin-top: 40px;
+  font-size: 14px;
 }
