@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Benim Portfolyom</title>
+  <title>Ali Gündüz | Portfolyo</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
   <header>
     <nav>
       <h1>Ali G.</h1>
@@ -18,34 +18,51 @@
       </ul>
     </nav>
   </header>
-
-
-  <section id="hero">
-    <h2>Merhaba 👋 Ben Ali</h2>
+ <section id="hero">
+    <h2>Merhaba 👋 Ben <span class="highlight">Ali Gündüz</span></h2>
     <p>Bilgisayar Mühendisliği öğrencisi & Web Geliştirici adayı 🚀</p>
+    <div class="hero-buttons">
+      <a href="#projects" class="btn">Projelerim</a>
+      <a href="#contact" class="btn btn-alt">İletişime Geç</a>
+    </div>
   </section>
-
- 
-  <section id="about">
+ <section id="about">
     <h2>Hakkımda</h2>
-    <p>Bilgisayar Mühendisliği okuyorum. Yazılım geliştirme, web teknolojileri ve veritabanlarıyla ilgileniyorum.</p>
+    <p>Bilgisayar Mühendisliği okuyorum. Yazılım geliştirme, web teknolojileri ve veritabanlarıyla ilgileniyorum. 
+    Amacım freelance işler alarak hem kendimi geliştirmek hem de gerçek projeler üzerinde deneyim kazanmak.</p>
   </section>
-
-  
   <section id="projects">
     <h2>Projeler</h2>
-    <p>Yakında buraya projelerimi ekleyeceğim 💻</p>
+    <div class="project-list">
+      <div class="project-card">
+        <h3>Hesap Makinesi</h3>
+        <p>Basit bir HTML, CSS ve JS hesap makinesi uygulaması.</p>
+        <a href="#" class="btn">Projeyi Gör</a>
+      </div>
+      <div class="project-card">
+        <h3>To-Do List</h3>
+        <p>Yapılacaklar listesi uygulaması. Görev ekleme, silme ve tamamlama özellikleri.</p>
+        <a href="#" class="btn">Projeyi Gör</a>
+      </div>
+      <div class="project-card">
+        <h3>Portfolyo Web Sitesi</h3>
+        <p>Kendi kişisel portfolyo sitem. HTML ve CSS ile geliştirilmiştir.</p>
+        <a href="#" class="btn">Projeyi Gör</a>
+      </div>
+    </div>
   </section>
-
- 
   <section id="contact">
     <h2>İletişim</h2>
-    <p>Email: <a href="mailto:ali.gunduz.2029@gmail.com">ali.gunduz.2029@gmail.com</a></p>
-    <p>GitHub: <a href="https://github.com/AliG-61" target="_blank">github.com/AliG-61</a></p>
+    <p>Bana ulaşmak için:</p>
+    <ul class="contact-links">
+      <li><a href="mailto:ali.gunduz.2029@gmail.com">📧 Mail</a></li>
+      <li><a href="https://github.com/AliG-61" target="_blank">💻 GitHub</a></li>
+      <li><a href="https://linkedin.com" target="_blank">🔗 LinkedIn</a></li>
+    </ul>
   </section>
-
-  <footer>
+ <footer>
     <p>© 2025 Ali G. Tüm hakları saklıdır.</p>
   </footer>
 </body>
 </html>
+
